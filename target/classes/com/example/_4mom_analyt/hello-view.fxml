@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example._4mom_analyt.HelloController">
+   <children>
+      <BarChart fx:id="barChart" layoutX="216.0" layoutY="341.0" prefHeight="218.0" prefWidth="543.0">
+        <yAxis>
+          <CategoryAxis label="Goods" side="LEFT" />
+        </yAxis>
+        <xAxis>
+          <NumberAxis fx:id="yAxis" label="Payback" side="BOTTOM" />
+        </xAxis>
+      </BarChart>
+      <TableView fx:id="tableView" editable="true" layoutX="-3.0" prefHeight="335.0" prefWidth="806.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="118.39996027946472" text="ID товара" />
+          <TableColumn fx:id="nameColumn" prefWidth="105.5999755859375" text="Название" />
+            <TableColumn fx:id="priceColumn" prefWidth="94.40003967285156" text="Стоимость" />
+            <TableColumn fx:id="rentDaysColumn" prefWidth="96.0" text="Дней в аренде" />
+            <TableColumn fx:id="profitColumn" prefWidth="92.79998779296875" text="Заработок" />
+            <TableColumn fx:id="paybackColumn" prefWidth="103.20001220703125" text="Окупаемость" />
+            <TableColumn fx:id="clientColumn" prefWidth="193.60001220703123" text="Клиенты купившие" />
+        </columns>
+      </TableView>
+      <Button layoutX="52.0" layoutY="423.0" mnemonicParsing="false" onAction="#showPaybackChart" text="Окупаемость">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
